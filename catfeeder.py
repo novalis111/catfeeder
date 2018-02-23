@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 # Import required libraries
 import time
 import RPi.GPIO as GPIO
@@ -9,6 +10,8 @@ GPIO.setmode(GPIO.BCM)
 
 
 def rotate(steps):
+    # One sequence is eight mini steps
+    steps *= 8
     # Define GPIO signals to use
     # Physical pins 11,15,16,18
     # GPIO17,GPIO22,GPIO23,GPIO24
